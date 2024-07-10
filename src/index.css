@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+#instaStory {
+  position: relative;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#instaStory::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  z-index: -1;
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d
+  );
+  border-radius: inherit;
+}
+@media (max-width: 1130px) {
+  #rightSidebar {
+    display: none;
+  }
+  #home {
+    width: 100%;
+  }
+  #homeChild {
+    width: 100%;
+  }
+}
+
+@media (max-width: 740px) {
+  #sidebar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: white;
+    width: 100%;
+    padding: 0px 10px;
+  }
+  #sidebarMenu {
+    display: flex;
+    padding: 10px 0px;
+    width: 100%;
+    position: relative;
+  }
+  #menuParent {
+    flex-direction: row;
+    width: 100%;
+    margin: 0px;
+    gap: 1px;
+  }
+  #logo {
+    display: none;
+  }
+  #home {
+    width: 100%;
+  }
+  #stories {
+    padding: 0px 5px;
+  }
+  .hideVisibility {
+    display: none;
+  }
+}
+@keyframes marquee {
+  from {
+    transform: translateX(-200%);
+  }
+  to {
+    transform: translateX(300%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 8s linear infinite;
+}
+
+#myP {
+  background: linear-gradient(rgba(0, 0, 0, 0.87), rgba(255, 255, 255, 0));
+}
+
+#IoMdVolumeOff {
+  background: rgba(255, 255, 255, 0.205);
+}
+@media (max-width: 690px) {
+  #PrimaryInbox {
+    display: none;
+  }
+  #messages {
+    width: 100%;
+  }
+  #request {
+    display: none;
+  }
+  #leftRequest {
+    width: 100%;
+  }
+}
